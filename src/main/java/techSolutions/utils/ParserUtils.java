@@ -4,9 +4,6 @@ import org.jsoup.nodes.Element;
 
 import java.util.Objects;
 
-/**
- * daulet  8/27/17
- */
 public class ParserUtils {
 
     public static String getAttrValue(Element element, String attrKey) {
