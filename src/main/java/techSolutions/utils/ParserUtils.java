@@ -1,6 +1,7 @@
 package techSolutions.utils;
 
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.util.Objects;
 
@@ -22,5 +23,13 @@ public class ParserUtils {
 
     public static String getText(Element element) {
         return Objects.nonNull(element) ? element.text() : null;
+    }
+
+    public static Element getElementByIndex(Elements elements, int index) {
+        return Objects.nonNull(elements) && elements.size() > index ? elements.get(index) : null;
+    }
+
+    public static boolean elementsNotEmpty(Elements elements) {
+        return Objects.nonNull(elements) && elements.size() > 0;
     }
 }
